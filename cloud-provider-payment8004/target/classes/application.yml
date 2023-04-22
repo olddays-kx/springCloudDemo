@@ -1,0 +1,10 @@
+server:
+  port: 8004
+
+spring:
+  application:
+    name: cloud-payment-service
+  cloud:
+    #以zookeeper来作为注册服务中心
+    zookeeper:
+      connect-string: 192.168.67.131:2181

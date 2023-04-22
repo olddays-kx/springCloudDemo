@@ -1,5 +1,6 @@
 package com.kuang.cloud.entities;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
