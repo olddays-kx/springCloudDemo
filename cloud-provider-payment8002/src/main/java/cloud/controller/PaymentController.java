@@ -1,8 +1,8 @@
-package com.kuang.cloud.controller;
+package cloud.controller;
 
+import cloud.service.PaymentService;
 import com.kuang.cloud.entities.CommonResult;
 import com.kuang.cloud.entities.Payment;
-import com.kuang.cloud.service.PaymentService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -25,13 +24,13 @@ public class PaymentController {
     private DiscoveryClient discoveryClient;
 
     @Value("${server.port}")
-    private String servie_port;
+    private String service_port;
 
     @PostMapping(value = "/payment/create")
     public CommonResult creat(@RequestBody Payment payment) {
         int result = paymentService.create(payment);
         if (result > 0) {
-            return new CommonResult(200, "success port: " + servie_port, result);
+            return new CommonResult(200, "success port: " + service_port, result);
         } else {
             return new CommonResult(400, "not creat payment", null);
         }
@@ -41,7 +40,7 @@ public class PaymentController {
     public CommonResult getPaymentById(@PathVariable("id") Long id) {
         Payment payment = paymentService.getPaymentById(id);
         if (payment != null) {
-            return new CommonResult(200, "select success port: " + servie_port, payment);
+            return new CommonResult(200, "select success port: " + service_port, payment);
         } else {
             return new CommonResult(400, "select fail" + id, null);
         }

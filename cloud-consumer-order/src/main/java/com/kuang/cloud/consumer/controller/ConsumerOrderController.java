@@ -13,7 +13,8 @@ import javax.annotation.Resource;
 @RestController
 public class ConsumerOrderController {
 
-    private static final String PAYMNET_URL = "http://localhost:8001";
+    //服务注册的地址
+    private static final String PAYMNET_URL = "http://cloud-payment-service";
     @Resource
     private RestTemplate restTemplate;
 
@@ -22,7 +23,7 @@ public class ConsumerOrderController {
         return restTemplate.postForObject(PAYMNET_URL+ "/payment/create",payment, CommonResult.class);
     }
 
-    @GetMapping("/consumer/paymen/get/{id}")
+    @GetMapping("/consumer/payment/get/{id}")
     public CommonResult<Payment> getPayment(@PathVariable("id") Long id) {
         return restTemplate.getForObject(PAYMNET_URL + "/payment/get/" + id, CommonResult.class);
     }

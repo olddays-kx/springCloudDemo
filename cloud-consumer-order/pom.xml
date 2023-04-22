@@ -10,6 +10,7 @@
     <groupId>com.kuang</groupId>
     <artifactId>cloud-consumer-order</artifactId>
     <name>cloud-consumer-order</name>
+    <packaging>jar</packaging>
     <properties>
         <java.version>1.8</java.version>
     </properties>
@@ -21,6 +22,10 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -36,6 +41,10 @@
         <dependency>
             <groupId>com.kuang</groupId>
             <artifactId>cloud-api-commons</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
         </dependency>
     </dependencies>
 </project>
