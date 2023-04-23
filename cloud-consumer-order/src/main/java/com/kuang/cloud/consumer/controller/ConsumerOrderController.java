@@ -45,7 +45,7 @@ public class ConsumerOrderController {
     public CommonResult<Payment> postPaymentEntity(@RequestBody Payment payment) {
         ResponseEntity<Payment> entity = restTemplate.postForEntity(PAYMNET_URL + "/payment/create", payment, Payment.class);
         if (entity.getStatusCode().is2xxSuccessful()) {
-            return new CommonResult(200, "插入成功", null);
+            return new CommonResult(200, "插入成功", entity.getBody());
         } else {
             return new CommonResult(400, "查找失败", null);
         }

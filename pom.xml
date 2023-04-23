@@ -19,6 +19,7 @@
     <module>cloud-consumer-orderzk80</module>
       <module>cloud-priderconsul-payment8006</module>
     <module>cloud-consumer-orderconsul80</module>
+      <module>cloud-consumer-of-order80</module>
   </modules>
 
   <packaging>pom</packaging>
