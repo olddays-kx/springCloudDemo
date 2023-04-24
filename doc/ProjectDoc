@@ -17,5 +17,7 @@
 
 9 cloud-provider-hystrix-payment8001 hystrix作为服务熔断降级的支付端
 
+10 cloud-gateway-gateway9527 springcloud gateway 服务网关
+
 
 
