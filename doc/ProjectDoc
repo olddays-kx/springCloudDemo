@@ -19,5 +19,13 @@
 
 10 cloud-gateway-gateway9527 springcloud gateway 服务网关
 
+11 cloud-config-center3344 服务配置中心
+
+12 cloud-config-client3355 cloud-config-client3366 客户端 从服务中心3344拉取配置 3344 3355 3366结合了config bus rabbitmq
+
+13 cloud-stream-rabbitmq-provider8801 消息驱动项目生产者
+
+14 cloud-stream-rabbitmq-consumer8802 cloud-stream-rabbitmq-consumer8803 消息驱动项目消费者
+
 
 
