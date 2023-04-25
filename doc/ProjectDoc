@@ -27,5 +27,9 @@
 
 14 cloud-stream-rabbitmq-consumer8802 cloud-stream-rabbitmq-consumer8803 消息驱动项目消费者
 
+15 cloudalibaba-provider-payment9001 9002 以nacos作为注册服务中心的支付者
+
+16 cloudalibaba-consumer-nacos-order83 以nacos作为注册服务中心的消费者
+
 
 
